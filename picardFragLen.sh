@@ -27,7 +27,7 @@ function getFragmentLength () {
 }
 
 
-arr=("6525844154_S1_L001_Aligned.sortedByCoord.out.bam" "6525844154_S1_L002_Aligned.sortedByCoord.out.bam")
+arr=("sample1_Aligned.sortedByCoord.out.bam" "sample2_Aligned.sortedByCoord.out.bam")
 
 # calling function and assigning jobs from arrays to cluster
 getFragmentLength ${arr[$SLURM_ARRAY_TASK_ID-1]}
