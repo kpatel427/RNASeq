@@ -6,7 +6,7 @@
 #SBATCH --output=star_a-%j.out
 #SBATCH --error=star_a-%j.err
 
-fastq_dir="/mnt/isilon/maris_lab/target_nbl_ngs/papThyCarcinoma_bulkRNASeq/6525844154_ds.790c25ced1574bbb86c1166a4fa1d902"
+fastq_dir="~/KP/fastqfiles/"
 
 
 	echo "Performing alignment..."
@@ -14,8 +14,8 @@ fastq_dir="/mnt/isilon/maris_lab/target_nbl_ngs/papThyCarcinoma_bulkRNASeq/65258
 	/home/patelk26/apps/star/STAR-STAR_2.4.2a/bin/Linux_x86_64/STAR \
 	--genomeDir /home/patelk26/KP/papThyCarc_bulkRNASeq/STAR2 \
 	--runThreadN 20 \
-	--readFilesIn $fastq_dir/6525844154_S1_L001_R1_001.fastq.gz,$fastq_dir/6525844154_S1_L001_R2_001.fastq.gz \
-	--outFileNamePrefix ./aligned2/6525844154_S1_L001 \
+	--readFilesIn $fastq_dir/sample1_R1.fastq.gz,$fastq_dir/sample1_R2.fastq.gz \
+	--outFileNamePrefix ./aligned2/sample1 \
 	--outSAMtype BAM Unsorted \
 	--outSAMunmapped Within \
 	--twopassMode Basic \
