@@ -14,6 +14,6 @@ bamPEFragmentSize \
 -T "Fragment size of PE RNA-seq data" \
 --maxFragmentLength 1000 \
 -b aligned/sample1_Aligned.sortedByCoord.out.bam aligned/sample2_Aligned.sortedByCoord.out.bam \
---samplesLabel 6525844154_S1_L001 6525844154_S1_L002
+--samplesLabel sample1 sample2
 
 echo "Done!"
